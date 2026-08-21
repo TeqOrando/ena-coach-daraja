@@ -150,7 +150,7 @@ app.post('/api/mpesa/callback', (req, res) => {
   } catch (err) { console.error('Callback processing error:', err); }
 });
 
-app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
+app.get('/*splat', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
 app.listen(PORT, () => {
   console.log(`ENA Coach Daraja backend listening on port ${PORT}`);
